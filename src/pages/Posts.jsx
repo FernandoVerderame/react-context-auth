@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import PostCard from "../../components/PostCard/PostCard.jsx";
+import PostCard from "../components/PostCard/PostCard.jsx";
 const apiUrl = import.meta.env.VITE_BASE_API_URL
 
 const Posts = () => {

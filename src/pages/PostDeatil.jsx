@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import PostCard from "../../components/PostCard/PostCard";
+import PostCard from "../components/PostCard/PostCard";
 
 const apiUrl = import.meta.env.VITE_BASE_API_URL;
 
