@@ -48,7 +48,7 @@ const PostCard = ({ title, content, image, category, tags, slug, isShow, user })
                         </Link>
                     )}
 
-                    {tags.length > 0 ? (
+                    {tags?.length > 0 ? (
                         <div>
                             <ul className={postCardStyle.tags}>
                                 {tags.map((tag, i) => (
@@ -62,7 +62,7 @@ const PostCard = ({ title, content, image, category, tags, slug, isShow, user })
                         <p>Nessun tag</p>
                     )}
                 </div>
-                <p className="mt-3 mb-0 fst-italic text-center">{user.name}</p>
+                <p className="mt-3 mb-0 fst-italic text-center">{user?.name}</p>
             </div>
         </div>
     );
