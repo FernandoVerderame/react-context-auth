@@ -109,7 +109,7 @@ const Form = ({ initialData, onSubmit }) => {
                                         id="categoryId"
                                         name="categoryId"
                                         defaultValue={postData.categoryId}
-                                        onChange={(e) => changePostData('categoryId', e.target.value)}
+                                        onChange={(e) => changePostData('categoryId', Number(e.target.value))}
                                         className={formStyle.categorySelect}
                                     >
                                         <option value="">Seleziona una categoria</option>
@@ -127,22 +127,20 @@ const Form = ({ initialData, onSubmit }) => {
                                 <div className="mb-5">
                                     <h3 className="h4">Tags</h3>
                                     <ul>
-                                        {tags.map((tag) => (
-                                            <li key={tag.id}>
+                                        {tags.map(({ id, name }, i) => (
+                                            <li key={`tag-${i}`}>
                                                 <input
                                                     type='checkbox'
-                                                    id={tag.id}
-                                                    name={tag.id}
-                                                    checked={postData.tags.includes(tag.id)}
+                                                    checked={postData.tags.includes(id)}
                                                     onChange={() => {
                                                         const curr = postData.tags;
-                                                        const newTags = curr.includes(tag.id) ?
-                                                            curr.filter(el => el !== tag.id) :
-                                                            [...curr, tag.id];
+                                                        const newTags = curr.includes(id) ?
+                                                            curr.filter(el => el !== id) :
+                                                            [...curr, id];
                                                         handleField('tags', newTags);
                                                     }}
                                                 />
-                                                <label htmlFor={tag.id}>{tag.name}</label>
+                                                <label>{name}</label>
                                             </li>
                                         ))}
                                     </ul>
