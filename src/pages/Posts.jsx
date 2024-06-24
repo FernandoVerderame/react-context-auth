@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import PostCard from "../components/PostCard/PostCard.jsx";
+import { Link } from "react-router-dom";
 const apiUrl = import.meta.env.VITE_BASE_API_URL
 
 const Posts = () => {
@@ -18,8 +19,12 @@ const Posts = () => {
     }, []);
 
     return (
-        <section className="container my-4">
-            <div className="row g-4">
+        <section className="container my-5">
+            <div className="d-flex justify-content-between align-items-center mb-5">
+                <h1 className="m-0">Lista dei Post</h1>
+                <Link to="create" className="btn btn-primary">Nuovo Post</Link>
+            </div>
+            <div className="row g-5">
                 {posts?.map(({ id, title, image, content, category, tags, published, slug, user }) => (
                     published === true &&
                     <div key={id} className="col-4">
