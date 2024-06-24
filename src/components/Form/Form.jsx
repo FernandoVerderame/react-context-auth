@@ -9,7 +9,6 @@ const Form = ({ initialData, onSubmit }) => {
 
     // Post di default
     const defaultPostData = initialData || {
-        id: new Date().toISOString(),
         title: '',
         image: '',
         content: '',
