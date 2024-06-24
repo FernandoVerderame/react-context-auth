@@ -8,14 +8,10 @@ const CreatePost = () => {
     const navigate = useNavigate();
 
     const createPost = async formData => {
-        const res = await axios.post(`${apiUrl}/posts`, formData, {
-            headers: {
-                'Content-Type': "multipart/form-data"
-            }
-        });
+        const res = await axios.post(`${apiUrl}/posts`, formData);
 
-        if (res.status > 400) {
-            navigate(`/posts/${res.data.id}`);
+        if (res.status < 400) {
+            navigate(`/posts/${res.data.slug}`);
         }
     }
 
