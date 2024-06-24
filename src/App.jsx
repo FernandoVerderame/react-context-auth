@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import DefaultLayout from "./layout/DefaultLayout.jsx";
+import DefaultLayout from "./layouts/DefaultLayout.jsx";
 import HomePage from "./pages/HomePage/HomePage.jsx";
 import Posts from "./pages/Posts/Posts.jsx";
 import PostDetail from "./pages/PostDetail/PostDeatil.jsx";
