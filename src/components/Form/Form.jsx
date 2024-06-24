@@ -67,7 +67,7 @@ const Form = ({ initialData, onSubmit }) => {
                             <div className="col-6">
                                 {/* Input Title */}
                                 <div className={formStyle.cardInput}>
-                                    <label htmlFor="title">Titolo</label>
+                                    <label htmlFor="title" className="h4">Titolo</label>
                                     <input
                                         type="text"
                                         id='title'
@@ -79,7 +79,7 @@ const Form = ({ initialData, onSubmit }) => {
 
                                 {/* Input Image */}
                                 <div className={formStyle.cardInput}>
-                                    <label htmlFor="image">URL Immagine</label>
+                                    <label htmlFor="image" className="h4">URL Immagine</label>
                                     <input
                                         type="url"
                                         id='image'
@@ -91,7 +91,7 @@ const Form = ({ initialData, onSubmit }) => {
 
                                 {/* Input Content */}
                                 <div className={formStyle.cardInput}>
-                                    <label htmlFor="content">Content</label>
+                                    <label htmlFor="content" className="h4">Content</label>
                                     <textarea
                                         id='content'
                                         name='content'
