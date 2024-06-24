@@ -5,6 +5,7 @@ import Posts from "./pages/Posts.jsx";
 import PostDetail from "./pages/PostDeatil.jsx";
 import CreatePost from "./pages/CreatePost.jsx";
 import { GlobalProvider } from "./contexts/GlobalContext.jsx";
+import EditPost from "./pages/EditPost.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
               <Route index element={<Posts />} />
               <Route path=":slug" >
                 <Route index element={<PostDetail />} />
+                <Route path="edit" element={<EditPost />} />
               </ Route>
               <Route path="create" element={<CreatePost />} />
             </Route>

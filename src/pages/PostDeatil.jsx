@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import PostCard from "../components/PostCard/PostCard";
 
 const apiUrl = import.meta.env.VITE_BASE_API_URL;
@@ -38,6 +38,7 @@ const PostDeatil = () => {
                 category={post?.category}
                 user={post?.user}
             />
+            <Link to={`/posts/${slug}/edit`} className="btn btn-warning mt-4">Modifica</Link>
         </section>
     );
 }
