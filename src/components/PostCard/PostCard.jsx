@@ -10,20 +10,14 @@ const PostCard = ({ title, content, image, category, tags, slug, isShow, user })
         RPG: '#09A4DE',
         FPS: '#089854',
         MOBA: '#FF5C17',
-        Simulation: '#A56E63',
+        'Open World': '#A56E63',
         Strategy: '#FF4F8D',
         Multiplayer: '#087F7A',
         Simulation: '#0809F8',
         Esports: '#4ACBB7'
     };
 
-    const abstract = () => {
-        if (typeof content === 'string') {
-            const abs = content.slice(0, 60);
-            return abs + '...';
-        }
-        return '';
-    };
+    const abstract = () => content ? content.slice(0, 60) + '...' : '';
 
     return (
         <div className={postCardStyle.postCard}>
